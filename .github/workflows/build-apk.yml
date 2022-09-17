@@ -5,6 +5,8 @@ env:
   COMPOSE_DOCKER_CLI_BUILD: 1
 on:
   workflow_dispatch:
+  repository_dispatch:
+    event-type: Build Revanced APK
 
 concurrency:
   group: ${{ github.head_ref || github.run_id }}
